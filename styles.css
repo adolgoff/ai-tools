@@ -21,6 +21,7 @@
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--bg);
@@ -70,19 +71,20 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.2px; }
   padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-soft);
 }
 .toc h2 { margin-top: 0; font-size: 13px; color: var(--muted); letter-spacing: 0.3px; text-transform: uppercase; }
-.toc a { display: block; color: var(--text); text-decoration: none; padding: 4px 0; font-size: 14px; line-height: 1.6; }
+.toc a { display: block; color: var(--text); text-decoration: none; padding: 4px 0; font-size: 13.5px; line-height: 1.6; }
 .toc a:hover, .toc a.active { color: var(--primary); }
 
 .content { padding: 0 4px; max-width: 75ch; }
 .content a { color: var(--link); }
 .content h2, .content h3, .content h4 { scroll-margin-top: 80px; }
-.content h2 { margin-top: 28px; border-bottom: 1px dashed var(--border); padding-bottom: 6px; font-size: 20px; }
-.content h3 { margin-top: 18px; font-size: 16px; color: var(--text); }
-.content p { margin: 6px 0 10px; font-size: 14.5px; line-height: 1.75; hyphens: auto; }
-.content ul { margin: 6px 0 14px 18px; font-size: 14.5px; line-height: 1.75; }
+.content h2 { margin-top: 28px; border-bottom: 1px dashed var(--border); padding-bottom: 6px; font-size: 20px; font-weight: 600; }
+.content h3 { margin-top: 18px; font-size: 16px; color: var(--text); font-weight: 550; }
+.content p { margin: 6px 0 10px; font-size: 14px; line-height: 1.75; hyphens: auto; }
+.content ul { margin: 6px 0 14px 18px; font-size: 14px; line-height: 1.75; }
 .content li { margin: 2px 0; }
 .content blockquote { margin: 10px 0 14px; padding: 10px 12px; border-left: 3px solid var(--border); background: color-mix(in oklab, var(--bg) 85%, var(--bg-soft)); color: var(--muted); border-radius: 8px; }
-.content blockquote.section-desc { font-style: italic; }
+.content blockquote.section-desc { font-style: italic; position: relative; }
+.content blockquote.section-desc::before { content: "ℹ︎ "; margin-right: 6px; }
 
 .loading { color: var(--muted); }
 
